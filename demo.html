@@ -1,0 +1,11 @@
+<script>
+var app = angular.module('myApp',['directives.dragdrop']);
+app.controller('dropImg', function($scope) {
+	$scope.items = 'default.png';
+	
+});
+</script>
+
+<div ng-app="myApp" ng-controller="dropImg">
+  <imgdrop-target="true" src="{{items}}" err-src="error.png" ng-model = "items" />
+</div>
